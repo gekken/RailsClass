@@ -1,0 +1,14 @@
+<H2><%= link_to  @item.name, edit_list_item_path %></H2>
+<p></p>
+<%= @item.note %>
+<p></p>
+<%= @item.tag %>
+<p></p>
+<img src ='<%= @item.image %>' >
+<p></p>
+<%= link_to 'Delete Item', [@list, @item],
+            :method => :delete,
+            :confirm => 'Are you sure you want to delete this item?' %>
+<p></p>
+<%= link_to "Back to list", list_path(@item.list_id) %>
+
